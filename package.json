@@ -4,7 +4,8 @@
   "description": "A React MUI & Formkik Component library",
   "license": "MIT",
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "publish": "npm publish --access public",
   },
   "author": "Zachariah Ngonyani",
   "main": "dist/cjs/index.js",
