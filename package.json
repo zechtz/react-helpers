@@ -1,6 +1,6 @@
 {
   "name": "@zechtz/react-helpers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A React MUI & Formkik Component library",
   "license": "MIT",
   "scripts": {
