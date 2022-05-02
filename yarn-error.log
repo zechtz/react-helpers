@@ -1,5 +1,5 @@
 Arguments: 
-  /home/mtabe/.asdf/installs/nodejs/14.18.2/bin/node /home/mtabe/.asdf/installs/nodejs/14.18.2/.npm/bin/yarn publish
+  /home/mtabe/.asdf/installs/nodejs/14.18.2/bin/node /home/mtabe/.asdf/installs/nodejs/14.18.2/.npm/bin/yarn publish --access public
 
 PATH: 
   /home/mtabe/.asdf/plugins/nodejs/shims:/home/mtabe/.asdf/installs/nodejs/14.18.2/.npm/bin:/home/mtabe/.asdf/installs/nodejs/14.18.2/bin:/home/mtabe/.asdf/shims:/home/mtabe/.asdf/bin:/home/mtabe/.local/bin:/home/mtabe/.asdf/installs/lua/5.4.4/luarocks/bin:/home/mtabe/.cargo/bin:/home/mtabe/.asdf/installs/golang/1.17.5/go/bin:/data/work/dotfiles/scripts:/home/mtabe/.local/share/nvim/lsp_servers/rust:/home/mtabe/.local/share/nvim/lsp_servers/denols:/home/mtabe/.asdf/installs/java/openjdk-11:/home/mtabe/.asdf/bin:/home/mtabe/.local/share/nvim/lsp_servers/go:/home/mtabe/.local/share/nvim/lsp_servers/cmake/venv/bin:/home/mtabe/.local/share/nvim/lsp_servers/cssls/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/dockerfile/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/angularls/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/diagnosticls/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/dotls/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/clangd:/home/mtabe/.local/share/nvim/lsp_servers/graphql/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/yaml/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/kotlin/server/bin:/home/mtabe/.local/share/nvim/lsp_servers/volar/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/vuels/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/emmet_ls/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/lemminx:/home/mtabe/.local/share/nvim/lsp_servers/tailwindcss_npm/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/vscode-eslint/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/elixir/elixir-ls:/home/mtabe/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin:/home/mtabe/.asdf/bin:/home/mtabe/.local/bin:/home/mtabe/.asdf/installs/lua/5.4.4/luarocks/bin:/home/mtabe/.cargo/bin:/home/mtabe/.asdf/installs/golang/1.17.5/go/bin:/data/work/dotfiles/scripts:/home/mtabe/.local/share/nvim/lsp_servers/rust:/home/mtabe/.local/share/nvim/lsp_servers/denols:/home/mtabe/.asdf/installs/java/openjdk-11:/home/mtabe/.asdf/bin:/home/mtabe/.local/share/nvim/lsp_servers/go:/home/mtabe/.local/share/nvim/lsp_servers/cmake/venv/bin:/home/mtabe/.local/share/nvim/lsp_servers/cssls/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/dockerfile/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/angularls/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/diagnosticls/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/dotls/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/clangd:/home/mtabe/.local/share/nvim/lsp_servers/graphql/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/yaml/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/kotlin/server/bin:/home/mtabe/.local/share/nvim/lsp_servers/volar/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/vuels/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/emmet_ls/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/lemminx:/home/mtabe/.local/share/nvim/lsp_servers/tailwindcss_npm/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/vscode-eslint/node_modules/.bin:/home/mtabe/.local/share/nvim/lsp_servers/elixir/elixir-ls:/home/mtabe/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin:/home/mtabe/.local/bin:/home/mtabe/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/mtabe/.config/composer/vendor/squizlabs/php_codesniffer/bin:/home/mtabe/misc/bin:/home/mtabe/misc/vendor/bin:/home/mtabe/misc/knex/node_modules/.bin:/home/mtabe/.asdf/installs/elixir/1.13.2/.mix/escripts:/home/mtabe/.config/yarn/global/node_modules/.bin:/home/mtabe/.asdf/shims/gem:/home/mtabe/.asdf/installs/python/3.10.0/bin:/home/mtabe/.asdf/installs/php/7.4.3/.composer/vendor/bin:/data/go/src/bin:/home/mtabe/.asdf/installs/spring-boot/2.6.4/bin:/home/mtabe/.deno/bin:/home/mtabe/.config/composer/vendor/squizlabs/php_codesniffer/bin:/home/mtabe/misc/bin:/home/mtabe/misc/vendor/bin:/home/mtabe/misc/knex/node_modules/.bin:/home/mtabe/.asdf/installs/elixir/1.13.2/.mix/escripts:/home/mtabe/.config/yarn/global/node_modules/.bin:/home/mtabe/.asdf/shims/gem:/home/mtabe/.asdf/installs/python/3.10.0/bin:/home/mtabe/.asdf/installs/php/7.4.3/.composer/vendor/bin:/data/go/src/bin:/home/mtabe/.asdf/installs/spring-boot/2.6.4/bin:/home/mtabe/.deno/bin
@@ -14,17 +14,12 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/-/user/org.couchdb.user:mtabe: failed to authenticate: Could not authenticate mtabe: bad password
-      at Request.params.callback [as _callback] (/home/mtabe/.asdf/installs/nodejs/14.18.2/.npm/lib/node_modules/yarn/lib/cli.js:66138:18)
-      at Request.self.callback (/home/mtabe/.asdf/installs/nodejs/14.18.2/.npm/lib/node_modules/yarn/lib/cli.js:140883:22)
-      at Request.emit (events.js:400:28)
-      at Request.<anonymous> (/home/mtabe/.asdf/installs/nodejs/14.18.2/.npm/lib/node_modules/yarn/lib/cli.js:141855:10)
-      at Request.emit (events.js:400:28)
-      at IncomingMessage.<anonymous> (/home/mtabe/.asdf/installs/nodejs/14.18.2/.npm/lib/node_modules/yarn/lib/cli.js:141777:12)
-      at Object.onceWrapper (events.js:519:28)
-      at IncomingMessage.emit (events.js:412:35)
-      at endReadableNT (internal/streams/readable.js:1334:12)
-      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+  SyntaxError: /data/sites/template-react-component-library/package.json: Unexpected token } in JSON at position 229
+      at JSON.parse (<anonymous>)
+      at /home/mtabe/.asdf/installs/nodejs/14.18.2/.npm/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/home/mtabe/.asdf/installs/nodejs/14.18.2/.npm/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /home/mtabe/.asdf/installs/nodejs/14.18.2/.npm/lib/node_modules/yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
@@ -33,7 +28,8 @@ npm manifest:
     "description": "A React MUI & Formkik Component library",
     "license": "MIT",
     "scripts": {
-      "rollup": "rollup -c"
+      "rollup": "rollup -c",
+      "publish": "npm publish --access public",
     },
     "author": "Zachariah Ngonyani",
     "main": "dist/cjs/index.js",
