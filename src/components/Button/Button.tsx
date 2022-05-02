@@ -6,7 +6,7 @@ interface BtnProps {
   children: React.ReactNode;
 }
 
-const BaseButton = ({ children, ...otherProps }: BtnProps) => {
+const Button = ({ children, ...otherProps }: BtnProps) => {
   const buttonConfig = {
     variant: "contained",
     color: "primary",
@@ -17,4 +17,4 @@ const BaseButton = ({ children, ...otherProps }: BtnProps) => {
   return <ButtonBase {...buttonConfig}>{children}</ButtonBase>;
 };
 
-export default BaseButton;
+export default Button;
