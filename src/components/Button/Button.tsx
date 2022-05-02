@@ -1,11 +1,20 @@
 import React from "react";
 
-interface ButtonProps {
-  label: string;
+import ButtonBase from "@mui/material/ButtonBase";
+
+interface BtnProps {
+  children: React.ReactNode;
 }
 
-const Button = (props: ButtonProps) => {
-  return <button>{props.label}</button>;
+const BaseButton = ({ children, ...otherProps }: BtnProps) => {
+  const buttonConfig = {
+    variant: "contained",
+    color: "primary",
+    fullWidth: true,
+    ...otherProps,
+  };
+
+  return <ButtonBase {...buttonConfig}>{children}</ButtonBase>;
 };
 
-export default Button;
+export default BaseButton;

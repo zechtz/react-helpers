@@ -12,18 +12,18 @@ export default [
       {
         file: packageJson.main,
         format: "cjs",
-        sourceMap: true
+        sourceMap: true,
       },
       {
         file: packageJson.module,
         format: "esm",
-        sourceMap: true
+        sourceMap: true,
       },
     ],
     plugins: [
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" })
+      typescript({ tsconfig: "./tsconfig.json" }),
     ],
   },
   {
