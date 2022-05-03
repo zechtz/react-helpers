@@ -1,20 +1,20 @@
-import React from "react";
+import React, { FC, ReactNode } from "react";
 
-import ButtonBase from "@mui/material/ButtonBase";
+import { Button as MuiButton, ButtonProps } from "@mui/material";
 
-interface BtnProps {
-  children: React.ReactNode;
+interface BtnProps extends ButtonProps {
+  children: ReactNode;
 }
 
-const Button = ({ children, ...otherProps }: BtnProps) => {
-  const buttonConfig = {
+const Button: FC<BtnProps> = ({ children, ...otherProps }) => {
+  const buttonConfig: ButtonProps = {
     variant: "contained",
     color: "primary",
     fullWidth: true,
     ...otherProps,
   };
 
-  return <ButtonBase {...buttonConfig}>{children}</ButtonBase>;
+  return <MuiButton {...buttonConfig}>{children}</MuiButton>;
 };
 
 export default Button;
