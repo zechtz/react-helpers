@@ -2525,6 +2525,11 @@ make-dir@^2.1.0:
     pify "^4.0.1"
     semver "^5.6.0"
 
+mdi-react@^8.3.1:
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/mdi-react/-/mdi-react-8.3.1.tgz#64e1744125f169ccd9bfaeaecbc77017bd66644a"
+  integrity sha512-2L1ie7rypQZZdFcqAJMe5ZLdYcsQVggYH9RC0jolG/5dgUz9vPWR4PBWDZ7XOjqwBzzenRTppui4Y8MZfy8xfA==
+
 memorystream@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/memorystream/-/memorystream-0.3.1.tgz#86d7090b30ce455d63fbae12dda51a47ddcaf9b2"
