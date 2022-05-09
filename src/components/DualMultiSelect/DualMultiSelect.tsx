@@ -29,18 +29,17 @@ const STATE: STATE_TYPE = {
   items: [],
 };
 
-interface DualMultiSelectProps {
+export interface Props {
   items: Array<any>;
   selectedItems: Array<any>;
   label: string;
   rightLabel: string;
-  normalId: boolean;
 }
 
-const DualMultiSelect: FC<DualMultiSelectProps> = (props) => {
+const DualMultiSelect: FC<Props> = (props) => {
   // TODO: move inline styling from buttons to
 
-  const { items, selectedItems, label, rightLabel, normalId = true } = props;
+  const { items, selectedItems, label, rightLabel } = props;
 
   const [state, setState] = useState(STATE);
 
@@ -111,7 +110,7 @@ const DualMultiSelect: FC<DualMultiSelectProps> = (props) => {
   const setElementsToAdd = async () => {
     const _items: Array<any> = [];
     state.itemsToSelect.forEach((el) => {
-      const parsedElement = normalId ? parseInt(el) : el;
+      const parsedElement = parseInt(el);
       const item = state.items.find((i) => parseInt(i.id) === parsedElement);
       _items.push(item);
     });
@@ -121,7 +120,7 @@ const DualMultiSelect: FC<DualMultiSelectProps> = (props) => {
   const setElementsToRemove = async () => {
     const _items: Array<any> = [];
     state.itemsToRemove.forEach((el) => {
-      const parsedElement = normalId ? parseInt(el) : el;
+      const parsedElement = parseInt(el);
       const item = state.selectedItems.find(
         (i) => parseInt(i.id) === parsedElement
       );
@@ -235,68 +234,28 @@ const DualMultiSelect: FC<DualMultiSelectProps> = (props) => {
             <Button
               size="small"
               variant="outlined"
-              style={{
-                backgroundColor:
-                  state.itemsToSelect.length > 0 ? "rgb(31 162 184)" : null,
-              }}
               disabled={state.itemsToSelect.length < 1}
               onClick={addItems}
-              startIcon={
-                <ChevronRight
-                  style={{
-                    fill: state.itemsToSelect.length > 0 ? "#fff" : null,
-                  }}
-                />
-              }
+              startIcon={<ChevronRight />}
             />
             <Button
               size="small"
               variant="outlined"
-              style={{
-                "backgroundColor":
-                  state.itemsToRemove.length > 0 ? "rgb(31 162 184)" : null,
-              }}
               onClick={removeItems}
-              startIcon={
-                <ChevronLeft
-                  style={{
-                    fill: state.itemsToRemove.length > 0 ? "#fff" : null,
-                  }}
-                />
-              }
+              startIcon={<ChevronLeft />}
             />
             <Button
               size="small"
               color="primary"
               variant="outlined"
-              style={{
-                backgroundColor:
-                  state.items.length > 0 ? "rgb(31 162 184)" : null,
-              }}
               onClick={addAll}
-              startIcon={
-                <ChevronDoubleRight
-                  style={{
-                    fill: state.items.length > 0 ? "#fff" : null,
-                  }}
-                />
-              }
+              startIcon={<ChevronDoubleRight />}
             />
             <Button
               size="small"
               variant="outlined"
-              style={{
-                backgroundColor:
-                  state.selectedItems.length > 0 ? "rgb(31 162 184)" : null,
-              }}
               onClick={removeAll}
-              startIcon={
-                <ChevronDoubleLeft
-                  style={{
-                    fill: state.selectedItems.length > 0 ? "#fff" : null,
-                  }}
-                />
-              }
+              startIcon={<ChevronDoubleLeft />}
             />
           </Grid>
         </Grid>
