@@ -4,24 +4,25 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { Theme } from "@mui/material/styles/createTheme";
+import PropTypes from "prop-types";
 
 import { makeStyles } from "@mui/styles";
+import { useTheme } from "@mui/material/styles";
 
 import CloseIcon from "@mui/icons-material/Close";
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles(() => ({
   paper: { minWidth: "650px", width: "auto" },
   divider: { padding: 0 },
   root: {
-    padding: theme.spacing(2),
-    backgroundColor: theme.palette.primary.main,
+    padding: useTheme().spacing(2),
+    backgroundColor: useTheme().palette.primary.main,
     "& div": {
       color: "white",
     },
   },
   dialogWrapper: {
-    padding: theme.spacing(0),
+    padding: useTheme().spacing(0),
   },
   dialogTitle: {
     paddingRight: "0px",
@@ -31,23 +32,29 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-interface DialgProps extends DialogProps {
+export interface Props extends DialogProps {
   title: string;
-  openDialog: boolean;
-  setOpenDialog: Function;
+  isOpen: boolean;
+  onCancel: Function;
   children: ReactNode;
 }
 
-const BaseDialog: FC<DialgProps> = (props) => {
-  const { title, children, openDialog, setOpenDialog, ...otherProps } = props;
+const BaseDialog: FC<Props> = ({
+  title,
+  children,
+  isOpen,
+  onCancel,
+  ...otherProps
+}) => {
   const classes = useStyles();
 
   const dialogConfig = {
+    isOpen,
     ...otherProps,
   };
 
   return (
-    <Dialog {...dialogConfig} open={openDialog}>
+    <Dialog {...dialogConfig}>
       <DialogTitle className={classes.root}>
         <Grid container>
           <Grid item>
@@ -60,7 +67,7 @@ const BaseDialog: FC<DialgProps> = (props) => {
             <CloseIcon
               className={classes.icon}
               onClick={() => {
-                setOpenDialog(false);
+                onCancel(false);
               }}
             />
           </Grid>
@@ -71,6 +78,20 @@ const BaseDialog: FC<DialgProps> = (props) => {
       </DialogContent>
     </Dialog>
   );
+};
+
+BaseDialog.defaultProps = {
+  isOpen: false,
+};
+
+BaseDialog.propTypes = {
+  title: PropTypes.string.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  onCancel: PropTypes.func.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 export default BaseDialog;
